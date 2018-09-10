@@ -62,6 +62,10 @@ $('#next').click(function(){
     if (next.length == 0) {
         next = $('#playlist li:first-child');
     }
+	if($('#play').is(':visible')){
+        $('#play').hide();
+        $('#pause').show();
+    }
     initAudio(next);
 	audio.play();
 	showDuration();
@@ -73,6 +77,10 @@ $('#prev').click(function(){
     var prev = $('#playlist li.active').prev();
     if (prev.length == 0) {
         prev = $('#playlist li:last-child');
+    }
+	if($('#play').is(':visible')){
+        $('#play').hide();
+        $('#pause').show();
     }
     initAudio(prev);
 	audio.play();
@@ -111,6 +119,24 @@ function showDuration(){
 			value = Math.floor((100 / audio.duration) * audio.currentTime);
 		}
 		$('#progress').css('width',value+'%');
+		
+	//After song ends play next song
+$(audio).on("ended", function() {
+    audio.pause();
+    var next = $('#playlist li.active').next();
+    if (next.length == 0) {
+        next = $('#playlist li:first-child');
+    }
+    initAudio(next);
+ audio.play();
+ showDuration();
+});
 	});
 }
+$("#progressbar").mouseup(function(e){
+    var leftOffset = e.pageX - $(this).offset().left;
+    var songPercents = leftOffset / $('#progressbar').width();
+ audio.currentTime = songPercents * audio.duration;
+});
+
 
