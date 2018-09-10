@@ -7,29 +7,47 @@
 			
 			<body>
 			
-					<div id = "container">
+				<div id = "container">
 						<div id = "audio-img">
-							<img class = "cover">
+							<img class = "cover"/>
 						</div>
 						
 						<div id = "audio-player">
 							<div id = "audio-info">
 									<span class="artist"></span> - <span class="title"></span>
-						</div>
 							</div>
+							<input id="volume" type="range" min="0" max="10" value="5">
+							<br>
+							<div id="audio-buttons">
+							<span>
+									<button id="prev"></button>
+									<button id="play"></button>
+									<button id="pause"></button>
+									<button id="stop"></button>
+									<button id="next"></button>
+									</span>
+							</div>
+							<div class ="clearfix"></div>
+							<div id="tracker">
+									<div id="progressbar">
+											<span id="progress"></span>						
+									</div>
+									<span id="duration"></span>
+							</div>
+							<div class ="clearfix"></div>
+							<ul id="playlist" class="hidden">
+									<li song="Pichle saat Dinon Mein - Rock On!! - OST.mp3" cover="cover1.jpg" artist="Rock On">Pichle Saat Dino Main.mp3</li>
+									<li song="Sinbad The Sailor [Full Song] Rock On!!.mp3" cover="cover1.jpg" artist="Rock On">Siindbad The Sailor.mp3</li>
+									<li song="Socha Hai [Full Song] Rock On!!.mp3" cover="cover1.jpg" artist="Rock On">Socha Hai.mp3</li>
+									<li song="Voh Dekhnay Mein - London Paris New York   Ali Zafar   Aditi Rao Hydari.mp3" cover="cover1.jpg" artist="Ali Zafar">Vo Dekhne Main.mp3</li>
+									
+									
+							</ul>
 						
-					</div>
-					
+						</div>
+				</div>	
 			
 			<script src="js/jquery.js"></script>
 			<script src="js/main.js"></script>
-
-
-
-
-
-
-
-
-
+			</body>
 </html>
