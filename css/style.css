@@ -1,22 +1,21 @@
-* {
-				margin:0;
-				padding:0;
-				outline : none;
-				border = none;
-				
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
 }
 
-body {
-				font-family: Arial, sans-serif;
-				font-size: 13px;
-				color:#fff;
-				background: url(../images/bg.png);
+body{
+	font-family:arial;
+	font-size:13px;
+	line-height:1.5em;
+	color:#fff;
+	background: url(../images/bg.png);
 }
 
-.clearfix {
-	clear: both;
+.clearfix{
+	clear:both;
 }
-
 
 #container{
 	width:330px;
@@ -24,51 +23,45 @@ body {
 	background:#333;
 	overflow:auto;
 	margin:60px auto;
-	border:#666 solid 2px;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
+	border:#666 solid 2px;
 }
-	
-	
-#audio-img{
-	position: relative;
-	overflow: hidden;
-	height: 200px;
+
+#audio-image{
+	position:relative;
+	overflow:hidden;
+	height:200px;
 	margin-bottom:15px;
 }
-
-
-.cover{
-	width:100%;
-	z-index:1;
-}
-	
 
 #audio-info{
 	text-align:center;
 }
 
-
-#audio-info.artist{
+#audio-info .artist{
 	font-weight:bold;
 }
 
-
-input#volume{
-	width:95%;
-	-webkit-appearance: none ! important;
-	margin-left:2%;
-	background:#CCC;
-	height:1px;
-	margin-bottom:20px;
+.cover{
+	width:100%;
+	z-index:1;
 }
 
-input#volume: : -webkit-slider-thumb{
-	-webkit-appearance:none !important;
-	background:url(../images/knob.jpg) no-repeat;
-	height:12px;
-	width:12px;
+input#volume {
+	width:95%;
+	margin-left:2%;
+    -webkit-appearance: none !important;
+    background:#ccc;
+    height:1px;
+	margin-bottom:20px;
+}
+input#volume::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:url(../images/knob.png) no-repeat;
+    height:12px;
+    width:12px;
 }
 
 #buttons{
@@ -135,7 +128,6 @@ button#next{
 	background:#666;
 }
 
-
 #progressBar { 
    width:80%;
    margin-left:2%;
@@ -152,9 +144,6 @@ button#next{
    display:inline-block;
 }
 
-
-}
-
 #duration{
 	position:absolute;
 	top:0;
@@ -163,11 +152,4 @@ button#next{
 	background:#000;
 	border-radius:5px;
 }
-
-#tracker{
-	position:relative;
-}
-
-
-
 
